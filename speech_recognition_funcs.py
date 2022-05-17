@@ -12,7 +12,7 @@ seed = 42
 tf.random.set_seed(seed)
 np.random.seed(seed)
 
-commands = ['up' 'down' 'stop' 'go' 'no' 'yes' 'left' 'right']
+commands = ['up', 'down', 'stop', 'go', 'no', 'yes', 'left', 'right']
 
 AUTOTUNE = tf.data.AUTOTUNE
 
@@ -88,7 +88,9 @@ def get_spectrogram_and_label_id(audio, label):
 
 
 def preprocess_dataset(files):
+    print(files)
     files_ds = tf.data.Dataset.from_tensor_slices(files)
+    print(files_ds)
     output_ds = files_ds.map(
         map_func=get_waveform_and_label,
         num_parallel_calls=AUTOTUNE)
