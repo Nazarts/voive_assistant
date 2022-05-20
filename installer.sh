@@ -1,8 +1,6 @@
 #!/bin/bash
 #
 # A bash script for installing Python 3.7.2 on your Debian, Ubuntu or Mint server.
-# (c) 2019 Valentin B.
-#
 # Open your terminal and enter the following command:
 # wget https://gist.github.com/vbe0201/b85ec47bc198d1c8471acbf016922005/raw/get-python.sh && chmod +x get-python.sh && ./get-python.sh
 
@@ -42,4 +40,4 @@ echo '$alias pip3="python3.8 -m pip"' >> ~/.bashrc
 
 # Requirements installation
 
-pip install -r requirementa.txt
+pip install -r requirements.txt
