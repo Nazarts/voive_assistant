@@ -39,3 +39,7 @@ update-alternatives --install /usr/bin/python python /usr/local/bin/python3.8
 sudo update-alternatives  --set python /usr/local/bin/python3.8
 
 echo '$alias pip3="python3.8 -m pip"' >> ~/.bashrc
+
+# Requirements installation
+
+pip install -r requirementa.txt

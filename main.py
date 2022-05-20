@@ -2,7 +2,7 @@ import pyaudio
 import wave
 import time
 
-from test import sample_recognition
+from helpers import sample_recognition
 
 # Params setting
 FORMAT = pyaudio.paInt16
