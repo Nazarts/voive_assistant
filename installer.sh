@@ -9,35 +9,16 @@ apt upgrade
 
 sudo apt-get install build-essential checkinstall libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev -y
 
-mkdir python_installation && cd python_installation
+sudo add-apt-repository ppa:deadsnakes/ppa
 
-wget https://www.python.org/ftp/python/3.8.12/Python-3.8.12.tgz
-tar xzvf Python-3.8.12.tgz
-rm -f Python-3.8.12.tgz
+sudo apt-get update
 
-cd Python-3.8.12
-
-./configure --enable-optimizations
-make -j 4
-make altinstall
-
-cd ../..
-rm -rf python_installation
-
-apt --purge remove build-essential checkinstall libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev -y
-apt autoremove -y
-apt clean
+sudo apt-get install python3.8
 
 sudo apt install python3-pip
 
 python3.8 -m pip install -U pip
 
-update-alternatives --install /usr/bin/python python /usr/local/bin/python3.8
-
-sudo update-alternatives  --set python /usr/local/bin/python3.8
-
-echo '$alias pip3="python3.8 -m pip"' >> ~/.bashrc
-
 # Requirements installation
 
-pip install -r requirements.txt
+python3.8 -m pip install -r requirements.txt
