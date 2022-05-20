@@ -2,7 +2,7 @@ import pyaudio
 import wave
 import time
 
-from helpers import sample_recognition
+from helpers import sample_recognition, play_response
 
 # Params setting
 FORMAT = pyaudio.paInt16
@@ -54,7 +54,7 @@ while True:
 
     command = sample_recognition()
 
-    print(command)
+    play_response(command)
 
     if command == 'stop':
         break
