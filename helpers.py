@@ -6,7 +6,7 @@ import os
 
 # Audio recognition wrapper
 def sample_recognition():
-    sample_file = r'C:\Users\nazik\PycharmProjects\voive_assistant\recordedFile.wav'
+    sample_file = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'recordedFile.wav')
 
     print(os.path.dirname(os.path.realpath(__file__)))
 
